@@ -1,0 +1,139 @@
+.searchComponent {
+    width: 40px;
+    height: 38px;
+    position: relative;
+}
+
+.searchField__wrapper {
+    width: 40px;
+    height: 38px;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bi-search {
+    width: 30px;
+    height: 28px;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    left: 4px;
+    z-index: 2;
+}
+.searchField {
+    width: 0%;
+    height: 100%;
+    padding-left: 40px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.searchComponent-active {
+    .searchField__wrapper {
+        width: 300px;
+
+        .searchField {
+            width: 100%;
+            z-index: 1;
+        }
+    }
+}
+
+.searchedItems {
+    width: 300px;
+    max-height: 400px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    list-style: none;
+    overflow: auto;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index: 2;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+}
+.searchedItem {
+    border-bottom: 2px solid #ccc;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+.searchedItem a {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    color: #1b1b1b;
+    background-color: #fff;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #f5f5f5;
+    }
+}
+.searchedItem__left {
+    display: flex;
+    align-items: center;
+    max-width: 75px;
+    height: 60px;
+    margin-right: 5px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+}
+.searchedItem__right {
+    text-align: right;
+}
+.searchedItem__price {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 400px) {
+    .searchComponent-active {
+        .searchField__wrapper {
+            width: 250px;
+        }
+    }
+    .searchedItems {
+        width: 250px;
+    }
+}
+
+@media (max-width: 350px) {
+    .searchComponent-active {
+        .searchField__wrapper {
+            width: 200px;
+        }
+    }
+    .searchedItems {
+        width: 200px;
+    }
+}
