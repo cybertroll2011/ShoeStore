@@ -1,8 +1,28 @@
+@font-face{
+    font-family: 'Teko';
+    src: url(./fonts/Teko/Teko-Regular.ttf);
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'Teko';
+    src: url(./fonts/Teko/Teko-Bold.ttf);
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'Teko';
+    src: url(./fonts/Teko/Teko-Light.ttf);
+    font-weight: 300;
+}
+
+.App{
+    font-family: 'Teko';
+}
 .container{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
 }
+
 
 @media( max-width: 545px){
     .container{

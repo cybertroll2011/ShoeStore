@@ -6,6 +6,8 @@ import './Header.scss';
 import { colorThemesPack } from './colorThemesPack';
 import Navigation from './Navigation/Navigation.js';
 import SearchField from './SearchField/SearchField';
+import Logo from './Logo/Logo';
+import Bag from './Bag/Bag';
 
 const Header = () => {
     const colorTheme = useSelector(state => state.colorTheme.colorTheme);
@@ -17,8 +19,16 @@ const Header = () => {
             <header className="header" style={currentColorTheme}>
                 <div className="container">
                     <div className="header__inner">
-                        <Navigation colorTheme={currentColorTheme} />
-                        <SearchField colorTheme={currentColorTheme} />
+                        <div className="header__inner-left">
+                            <Navigation colorTheme={currentColorTheme} />
+                            <SearchField colorTheme={currentColorTheme} />
+                        </div>
+                        <div className="header__inner-center">
+                            <Logo colorTheme={currentColorTheme} />
+                        </div>
+                        <div className="header__inner-right">
+                            <Bag colorTheme={currentColorTheme} />
+                        </div>
                     </div>
                 </div>
             </header>

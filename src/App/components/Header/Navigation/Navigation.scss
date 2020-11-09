@@ -1,11 +1,9 @@
 .toggleMenuButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 44px;
     height: 44px;
     margin-right: 30px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 5px 0 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -15,28 +13,11 @@
         display: block;
         width: 22px;
         height: 3px;
+        margin-bottom: 3px;
         background-color: #fff;
         pointer-events: none;
         position: relative;
-
-        &::before,
-        &::after {
-            content: "";
-            width: 22px;
-            height: 3px;
-            background-color: #fff;
-            pointer-events: none;
-            position: absolute;
-            left: 0;
-        }
-
-        &::before {
-            top: -5px;
-        }
-
-        &::after {
-            bottom: -5px;
-        }
+        left: 25%;
     }
 }
 
@@ -94,12 +75,14 @@
     width: 100%;
     padding: 20px;
     color: inherit;
+    font-size: 20px;
+    letter-spacing: 2px;
     text-decoration: none;
     box-sizing: border-box;
     transition: 0.3s ease;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .nav-active {
         .nav__linkslist {
             width: 50%;
@@ -107,7 +90,10 @@
     }
 }
 
-@media(max-width: 545px) {
+@media (max-width: 545px) {
+    .toggleMenuButton {
+        margin-right: 15px;
+    }
     .nav-active {
         .nav__linkslist {
             width: 70%;

@@ -11,22 +11,32 @@ const Navigation = ({ colorTheme }) => {
         }
     }
 
+    const spanBg = {
+        backgroundColor: colorTheme.burgerMenuButton.color
+    }
+
     return (
         <div className="sideMenu">
             <button
                 className="toggleMenuButton"
                 style={colorTheme.burgerMenuButton}
                 onMouseMove={(event) => {
+                    const spans = Array.from(event.target.children);
                     event.target.style.backgroundColor =
                         colorTheme.burgerMenuButton.hover.backgroundColor;
-                    event.target.style.color =
-                        colorTheme.burgerMenuButton.hover.color
+                    spans.map(span => {
+                        return span.style.backgroundColor
+                            = colorTheme.burgerMenuButton.hover.color;
+                    })
                 }}
                 onMouseOut={(event) => {
+                    const spans = Array.from(event.target.children);
                     event.target.style.backgroundColor =
                         colorTheme.burgerMenuButton.backgroundColor;
-                    event.target.style.color =
-                        colorTheme.burgerMenuButton.color
+                    spans.map(span => {
+                        return span.style.backgroundColor
+                            = colorTheme.burgerMenuButton.color;
+                    })
                 }}
                 onClick={() => {
                     if (navClassName === 'nav') {
@@ -34,7 +44,9 @@ const Navigation = ({ colorTheme }) => {
                     }
                 }}
             >
-                <span></span>
+                <span style={spanBg}></span>
+                <span style={spanBg}></span>
+                <span style={spanBg}></span>
             </button>
             <div className="nav-wrapper">
                 <nav className={navClassName}>
