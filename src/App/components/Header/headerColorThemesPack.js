@@ -37,7 +37,7 @@ export const colorThemesPack = {
         }
     },
     blue: {
-        backgroundColor: '#74c7f7',
+        backgroundColor: '#74C7F7',
         burgerMenuButton: {
             color: '#fff',
             backgroundColor: '#48738d',
@@ -185,24 +185,24 @@ export const colorThemesPack = {
         }
     },
     lime: {
-        backgroundColor: '#15FF00',
+        backgroundColor: '#00FFA9',
         burgerMenuButton: {
-            color: '#15FF00',
-            backgroundColor: '#0F0F0F',
+            color: '#0F0F0F',
+            backgroundColor: '#FFF',
             hover: {
                 color: '#0F0F0F',
-                backgroundColor: '#15FF00'
+                backgroundColor: '#00FFA9'
             }
         },
         navigationMenu: {
-            backgroundColor: '#00AA00',
+            backgroundColor: '#00CC76',
             navigationMenuLink: {
                 color: '#0F0F0F',
-                backgroundColor: "#15FF00",
+                backgroundColor: "#00FFA9",
                 borderBottom: '3px solid #FFF',
                 hover: {
                     color: '#15FF00',
-                    backgroundColor: '#21CB21'
+                    backgroundColor: '#FFF'
                 }
             }
         },

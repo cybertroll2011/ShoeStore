@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import './Header.scss';
-import { colorThemesPack } from './colorThemesPack';
+import { colorThemesPack } from './headerColorThemesPack';
 import Navigation from './Navigation/Navigation.js';
 import SearchField from './SearchField/SearchField';
 import Logo from './Logo/Logo';

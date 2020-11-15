@@ -1,0 +1,15 @@
+.titlePage__item-right {
+    height: 50%;
+    margin-top: auto;
+    padding-top: 50px;
+    text-align: right;
+}
+.titlePage__item-link {
+    display: block;
+    margin-bottom: 10px;
+    transition: .3s ease;
+
+    &:hover{
+        filter: contrast(50%);
+    }
+}

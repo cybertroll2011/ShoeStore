@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-
-import './SearchField.scss';
-import './SearchedItem';
+import { getFirebaseDatabase } from '../../../firebase/firebase';
 import SearchedItem from './SearchedItem';
+import './SearchField.scss';
 
 const SearchField = ({ colorTheme }) => {
     const [searchComponentClassName, setSearchComponentClassName]
@@ -11,15 +9,32 @@ const SearchField = ({ colorTheme }) => {
     const [inputValue, setInputValue] = useState('');
 
     const onInputValueChanged = e => setInputValue(e.target.value);
-    const allGoods = useSelector(state => state.shoes.shoesData);
-    let searchingGoods = allGoods.filter(item => {
-        let fullName = item.brandName.toLowerCase() + ' ' + item.modelName.toLowerCase();
-        let comparableInputValue = inputValue.trim().toLowerCase();
+
+    // get all data from database
+    let allGoods = [];
+    const downloadData = () => {
+        if (searchComponentClassName === 'searchComponent searchComponent-active' &&
+            allGoods.length === 0) {
+            getFirebaseDatabase().ref('/goods/shoes').on('value', (data) => {
+                data.val().map(item => {
+                    return allGoods.push(item);
+                });
+            });
+        }
+    }
+    downloadData();
+
+    // filter data based on input value
+    const searchingGoods = allGoods.filter(item => {
+        const fullName = item.brandName.toLowerCase() + ' ' + item.modelName.toLowerCase();
+        const comparableInputValue = inputValue.trim().toLowerCase();
         if (comparableInputValue.length > 0 && fullName.includes(comparableInputValue)) {
             return true
         }
         return false
     })
+
+    //show filtered items to user
     const searchedItems = searchingGoods.map(item => (
         <SearchedItem key={item.id} item={item} />
     ))
@@ -30,6 +45,7 @@ const SearchField = ({ colorTheme }) => {
         }
     }
 
+    // hide search field if user clicked outside of it
     const useOutsideSearchField = (ref) => {
         useEffect(() => {
             const handleClickOutside = (event) => {
