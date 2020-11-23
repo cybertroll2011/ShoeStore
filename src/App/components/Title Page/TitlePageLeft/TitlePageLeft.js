@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './TitlePageLeft.scss';
 
 const TitlePageLeft = (
@@ -91,27 +91,25 @@ const TitlePageLeft = (
                         style={colorTheme.name}>
                         {item.brandName} {item.modelName}
                     </p>
-                    <Router>
-                        <Link
-                            to={"/shoes/" + item.id}
-                            className="titlePage__item-buyProduct"
-                            style={colorTheme.buyButton}>
-                            Check this item
+                    <Link
+                        to={"/shoes/" + item.id}
+                        className="titlePage__item-buyProduct"
+                        style={colorTheme.buyButton}>
+                        Check this item
                             <span
-                                className="titlePage__item-buyProduct-arrow">
-                                <span
-                                    className="titlePage__item-buyProduct-arrow-line"
-                                    style={colorTheme.buyButton.arrow.line}>
-                                    line
+                            className="titlePage__item-buyProduct-arrow">
+                            <span
+                                className="titlePage__item-buyProduct-arrow-line"
+                                style={colorTheme.buyButton.arrow.line}>
+                                line
                                 </span>
-                                <span
-                                    className="titlePage__item-buyProduct-arrow-triangle"
-                                    style={colorTheme.buyButton.arrow.triangle}>
-                                    triangle
+                            <span
+                                className="titlePage__item-buyProduct-arrow-triangle"
+                                style={colorTheme.buyButton.arrow.triangle}>
+                                triangle
                                 </span>
-                            </span>
-                        </Link>
-                    </Router>
+                        </span>
+                    </Link>
                 </div>
             </div>
         </div>

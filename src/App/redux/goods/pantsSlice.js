@@ -1,18 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    shoesData: [],
+    pantsData: [],
     loadingStatus: 'idle',
     error: null
 };
 
-const shoesSlice = createSlice({
-    name: "shoes",
+const pantsSlice = createSlice({
+    name: "pants",
     initialState,
     reducers: {
-        addShoesData(state, action) {
+        addPantsData(state, action) {
             action.payload.map(item => {
-                return state.shoesData.push(item);
+                return state.pantsData.push(item);
             })
         },
         setLoadingStatus(state, action) {
@@ -21,7 +21,7 @@ const shoesSlice = createSlice({
     }
 })
 
-export default shoesSlice.reducer;
+export default pantsSlice.reducer;
 
-export const { addShoesData } = shoesSlice.actions;
-export const { setLoadingStatus } = shoesSlice.actions;
+export const { addPantsData } = pantsSlice.actions;
+export const { setLoadingStatus } = pantsSlice.actions;

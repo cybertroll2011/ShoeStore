@@ -33,10 +33,10 @@ const LinksList = ({ colorTheme, closeNav }) => {
                 <Link to="/shoes" className="nav__link">Shoes</Link>
             </CustomNavLink>
             <CustomNavLink>
-                <Link to="/tshirt" className="nav__link">T-Shirts</Link>
+                <Link to="/tshirts" className="nav__link">T-Shirts</Link>
             </CustomNavLink>
             <CustomNavLink>
-                <Link to="/hoodie" className="nav__link">Hoodie</Link>
+                <Link to="/hoodies" className="nav__link">Hoodies</Link>
             </CustomNavLink>
             <CustomNavLink>
                 <Link to="/pants" className="nav__link">Pants</Link>

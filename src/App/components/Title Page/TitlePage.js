@@ -3,9 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { getFirebaseDatabase } from '../../firebase/firebase';
 import { setTitlePageItems } from '../../redux/titlePageSlice';
-import { setLoadingStatus } from '../../redux/goods/shoesSlice';
+import { setLoadingStatus } from '../../redux/titlePageSlice';
 import { colorThemesPack } from './titlePageColorThemesPack';
 import TitlePageItem from './TitlePageItem';
+import LoadingPlaceholer from '../LoadingPlacerholder/LoadingPlaceholder';
 
 import './TitlePage.scss';
 
@@ -18,11 +19,11 @@ const TitlePage = () => {
     let currentColorTheme = colorThemes[colorTheme];
 
     const dispatch = useDispatch();
-    const shoesDataStatus = useSelector(state => state.shoes.status);
-    const shoesData = useSelector(state => state.titlePageItems);
+    const loadingStatus = useSelector(state => state.titlePageItems.loadingStatus);
+    const titlePageItemsData = useSelector(state => state.titlePageItems.titlePageItems);
 
     useEffect(() => {
-        if (shoesDataStatus === 'idle') {
+        if (loadingStatus === 'idle') {
             dispatch(setLoadingStatus('loading'));
             getFirebaseDatabase().ref('/titlePageItems').on('value', (data) => {
                 let response = data.val().titlePageItems;
@@ -34,7 +35,7 @@ const TitlePage = () => {
 
     const nextTitlePageItem = (index) => {
         setTimeout(() => {
-            if (index < shoesData.length - 1) {
+            if (index < titlePageItemsData.length - 1) {
                 setCurrentItem(index + 1)
             }
         }, 300)
@@ -75,26 +76,13 @@ const TitlePage = () => {
         }
     }
 
-    const Loader = () => {
-        if (shoesDataStatus === 'loading') {
-            return (
-                <div className="lds-ring">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            )
-        }
-        return false
-    }
-    const TitlePageItems = shoesData.map(item => {
-        if (shoesData.indexOf(item) === currentItem) {
+    const TitlePageItems = titlePageItemsData.map(item => {
+        if (titlePageItemsData.indexOf(item) === currentItem) {
             return <TitlePageItem
                 key={item.id}
                 item={item}
-                index={shoesData.indexOf(item)}
-                titleItemsAmount={shoesData.length}
+                index={titlePageItemsData.indexOf(item)}
+                titleItemsAmount={titlePageItemsData.length}
                 handleWheelEvent={handleWheelEvent}
                 handleTouchStart={handleTouchStart}
                 handleTouchEnd={handleTouchEnd}
@@ -103,14 +91,15 @@ const TitlePage = () => {
                 prevTitlePageItem={prevTitlePageItem}
             />
         }
-        return
+        return false
     })
 
     return (
         <div className="titlePage" style={currentColorTheme}>
             <div className="container">
                 <div className="titlePage__inner">
-                    {TitlePageItems.length > 0 ? TitlePageItems : <Loader />}
+                    {TitlePageItems.length > 0 ? TitlePageItems :
+                        <LoadingPlaceholer loadingStatus={loadingStatus} />}
                 </div>
             </div>
         </div>

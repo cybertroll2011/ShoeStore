@@ -42,7 +42,10 @@ const Bag = ({ colorTheme }) => {
                 </svg>
             </button>
             <div className={bagClassName}>
-                <p>There are no items in your bag yet &#128532;</p>
+                <p>
+                    There are no items in your bag yet
+                    <span role="img" aria-label="sad emoji">&#128532;</span>
+                </p>
                 <Link to="/goods" className="bag__link-to-goods">Let's fix it!</Link>
             </div>
         </div>

@@ -1,0 +1,13 @@
+.goods{
+    // min-height: 100vh;
+    background-color: #F6F6F6;
+}
+.goods__container {
+    max-width: 1200px;
+    padding: 0 30px;
+}
+.goods__items-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}

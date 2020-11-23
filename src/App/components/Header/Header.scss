@@ -3,6 +3,15 @@
     transition: 0.2s ease;
     position: relative;
 }
+.header-fixed{
+    padding: 10px 0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
 .header__inner {
     display: flex;
     justify-content: space-between;
