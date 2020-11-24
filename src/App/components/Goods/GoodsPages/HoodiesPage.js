@@ -10,6 +10,7 @@ import '../Goods.scss';
 import LoadingPlaceholder from '../../LoadingPlacerholder/LoadingPlaceholder';
 import GoodsInnerTop from '../GoodsInnerTop/GoodsInnerTop';
 import GoodsItemCard from '../GoodsItemCard/GoodsItemCard';
+import Footer from '../../Footer/Footer';
 
 const HoodiesPage = () => {
     const hoodiesData = useSelector(state => state.hoodies.hoodiesData);
@@ -38,6 +39,7 @@ const HoodiesPage = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

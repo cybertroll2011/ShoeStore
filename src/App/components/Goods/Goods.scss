@@ -1,10 +1,8 @@
 .goods{
-    // min-height: 100vh;
     background-color: #F6F6F6;
 }
-.goods__container {
-    max-width: 1200px;
-    padding: 0 30px;
+.goods__inner{
+    min-height: 100vh;
 }
 .goods__items-wrapper{
     display: flex;

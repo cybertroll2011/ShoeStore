@@ -24,7 +24,7 @@ const App = () => {
                     <Route path="/tshirts" exact component={TshirtsPage} />
                     <Route path="/hoodies" exact component={HoodiesPage} />
                     <Route path="/pants" exact component={PantsPage} />
-                    {/* <Redirect to="/" /> */}
+                    <Redirect to="/" />
                 </Switch>
             </BrowserRouter>
         </div>

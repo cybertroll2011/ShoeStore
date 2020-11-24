@@ -10,6 +10,7 @@ import '../Goods.scss';
 import LoadingPlaceholder from '../../LoadingPlacerholder/LoadingPlaceholder';
 import GoodsInnerTop from '../GoodsInnerTop/GoodsInnerTop';
 import GoodsItemCard from '../GoodsItemCard/GoodsItemCard';
+import Footer from '../../Footer/Footer';
 
 
 const ShoesPage = () => {
@@ -40,6 +41,7 @@ const ShoesPage = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
