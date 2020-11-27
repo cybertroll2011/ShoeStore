@@ -13,7 +13,7 @@ const goodsSlice = createSlice({
         addGoodsData(state, action) {
             const objKeys = Object.keys(action.payload);
             objKeys.map(key => {
-                action.payload[key].map(item => {
+                return Object.values(action.payload[key]).map(item => {
                     return state.allGoodsData.push(item);
                 });
             })

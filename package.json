@@ -9,9 +9,12 @@
     "@testing-library/user-event": "^7.2.1",
     "firebase": "^7.24.0",
     "node-sass": "^4.14.1",
+    "pure-react-carousel": "^1.27.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-rating-stars-component": "^2.2.0",
     "react-redux": "^7.2.2",
+    "react-responsive-carousel": "^3.2.10",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-touch-events": "^3.0.0"

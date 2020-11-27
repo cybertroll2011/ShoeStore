@@ -92,7 +92,7 @@ const TitlePageLeft = (
                         {item.brandName} {item.modelName}
                     </p>
                     <Link
-                        to={"/shoes/" + item.id}
+                        to={"/product/shoes/" + item.id}
                         className="titlePage__item-buyProduct"
                         style={colorTheme.buyButton}>
                         Check this item

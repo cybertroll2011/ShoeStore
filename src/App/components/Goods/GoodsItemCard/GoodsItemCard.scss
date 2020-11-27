@@ -14,26 +14,35 @@
     position: relative;
 
     &:hover {
-        .goodsItem__photo {
+        .goodsItemCard__photo {
             display: none;
         }
-        .goodsItem__photo-hidden {
+        .goodsItemCard__photo-hidden {
             display: block;
         }
     }
 }
-.goodsItem__photo {
+.goodsItemCard__photo-wrapper{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-height: 400px;
+    img{
+        width: 100%;
+    }
+}
+.goodsItemCard__photo {
     width: 100%;
     display: block;
 }
-.goodsItem__photo-hidden {
+.goodsItemCard__photo-hidden {
     width: 100%;
     display: none;
 }
-.goodsItem__name{
+.goodsItemCard__name{
     margin-top: 15px;
 }
-.goodsItem__price{
+.goodsItemCard__price{
     font-size: 24px;
 }
 

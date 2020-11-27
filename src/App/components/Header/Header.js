@@ -34,7 +34,9 @@ const Header = () => {
     });
 
     return (
-        <header className={headerClassName} style={currentColorTheme}>
+        <header
+            className={headerClassName}
+            style={currentColorTheme}>
             <div className="container">
                 <div className="header__inner">
                     <div className="header__inner-left">

@@ -11,7 +11,7 @@ const tshirtsSlice = createSlice({
     initialState,
     reducers: {
         addTshirtsData(state, action) {
-            action.payload.map(item => {
+            Object.values(action.payload).map(item => {
                 return state.tshirtsData.push(item);
             })
         },

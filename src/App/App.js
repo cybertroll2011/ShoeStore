@@ -10,6 +10,7 @@ import ShoesPage from './components/Goods/GoodsPages/ShoesPage';
 import TshirtsPage from './components/Goods/GoodsPages/TshirtsPage';
 import HoodiesPage from './components/Goods/GoodsPages/HoodiesPage';
 import PantsPage from './components/Goods/GoodsPages/PantsPage';
+import ProductPage from './components/ProductPage/ProductPage';
 
 const App = () => {
     return (
@@ -24,6 +25,7 @@ const App = () => {
                     <Route path="/tshirts" exact component={TshirtsPage} />
                     <Route path="/hoodies" exact component={HoodiesPage} />
                     <Route path="/pants" exact component={PantsPage} />
+                    <Route path="/product" component={ProductPage} />
                     <Redirect to="/" />
                 </Switch>
             </BrowserRouter>

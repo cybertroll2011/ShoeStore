@@ -5,12 +5,12 @@ import './TitlePageRight.scss';
 const TitlePageRight = ({ colorTheme }) => {
     return (
         <div className="titlePage__item-right">
-            <Link to="/shoes/217145"
+            <Link to="/product/shoes/217145"
                 className="titlePage__item-link"
                 style={colorTheme.titleLinks}>
                 Nike LeBron 17
                 </Link>
-            <Link to="/shoes/857548"
+            <Link to="/product/shoes/857548"
                 className="titlePage__item-link"
                 style={colorTheme.titleLinks}>
                 Nike Jordan 'Why Not?' Zer0.3

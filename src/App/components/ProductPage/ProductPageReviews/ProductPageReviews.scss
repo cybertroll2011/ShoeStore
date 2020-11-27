@@ -1,0 +1,50 @@
+.productPageReviews {
+    width: 50%;
+    margin-top: 75px;
+    // border: 1px solid #000;
+}
+.productPageReviews__title{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.productPageReviews__wrapper {
+    list-style: none;
+}
+.productPageReview {
+    padding: 25px 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid red;
+    text-align: justify;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+.productPageReview__name {
+    margin-right: 15px;
+    font-size: 24px;
+}
+.productPageReview__date {
+    color: #747474;
+    font-size: 16px;
+}
+.productPageReview__review {
+    margin-top: 25px;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.productPageReview__review-full{
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    cursor: auto;
+}
+
+@media(max-width: 768px){
+    .productPageReviews{
+        width: 100%;
+    }
+}

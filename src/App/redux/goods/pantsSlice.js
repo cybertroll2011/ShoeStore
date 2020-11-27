@@ -11,7 +11,7 @@ const pantsSlice = createSlice({
     initialState,
     reducers: {
         addPantsData(state, action) {
-            action.payload.map(item => {
+            Object.values(action.payload).map(item => {
                 return state.pantsData.push(item);
             })
         },

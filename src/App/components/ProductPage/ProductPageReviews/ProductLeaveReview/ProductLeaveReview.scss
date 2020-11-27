@@ -1,0 +1,91 @@
+.productLeaveReview__wrapper {
+    margin-top: 10px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid red;
+}
+.productLeaveReview__login {
+    font-size: 20px;
+
+    a {
+        color: red;
+        padding: 0 5px;
+        position: relative;
+
+        &::after {
+            content: "login or register now";
+            width: 0;
+            height: 100%;
+            padding: 0 5px;
+            background-color: red;
+            color: #0f0f0f;
+            opacity: 0;
+            transition: 0.2s ease;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        &:hover {
+            &::after {
+                width: calc(100% - 10px);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.productLeaveReview__title {
+    font-size: 24px;
+}
+.productLeaveReview__textarea {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 15px;
+    height: 100px;
+    max-height: 300px;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    resize: none;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+}
+
+.productLeaveReview__submit {
+    margin-top: 25px;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: #0f0f0f;
+    border-radius: 4px;
+    box-shadow: 0 0 10px red;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+        color: #0f0f0f;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media (max-width: 768px) {
+    .productLeaveReview__submit{
+        width: 50%;
+    }
+}   

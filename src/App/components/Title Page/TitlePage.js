@@ -5,6 +5,7 @@ import { getFirebaseDatabase } from '../../firebase/firebase';
 import { setTitlePageItems } from '../../redux/titlePageSlice';
 import { setLoadingStatus } from '../../redux/titlePageSlice';
 import { colorThemesPack } from './titlePageColorThemesPack';
+
 import TitlePageItem from './TitlePageItem';
 import LoadingPlaceholer from '../LoadingPlacerholder/LoadingPlaceholder';
 

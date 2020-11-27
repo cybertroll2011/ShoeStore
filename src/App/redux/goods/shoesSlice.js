@@ -11,7 +11,7 @@ const shoesSlice = createSlice({
     initialState,
     reducers: {
         addShoesData(state, action) {
-            action.payload.map(item => {
+            Object.values(action.payload).map(item => {
                 return state.shoesData.push(item);
             })
         },

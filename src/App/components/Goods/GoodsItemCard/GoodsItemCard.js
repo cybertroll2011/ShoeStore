@@ -5,13 +5,16 @@ import './GoodsItemCard.scss';
 const GoodsItemCard = ({ item }) => {
     return (
         <div className="goodsItemCard-wrapper">
-            <Link to={"/" + item.type + "/" + item.id} className="goodsItemCard">
-                <img src={item.photos[0]} alt="" className="goodsItem__photo" />
-                <img src={item.photos[1]} alt="" className="goodsItem__photo-hidden" />
-                <h3 className="goodsItem__name">
+            <Link to={"/product/" + item.type + "/" + item.id} className="goodsItemCard">
+                <div className="goodsItemCard__photo-wrapper">
+                    <img src={item.photos[0]} alt="" className="goodsItemCard__photo" />
+                    <img src={item.photos[1]} alt="" className="goodsItemCard__photo-hidden" />
+                </div>
+                
+                <h3 className="goodsItemCard__name">
                     {item.brandName} {item.modelName}
                 </h3>
-                <p className="goodsItem__price">
+                <p className="goodsItemCard__price">
                     {item.price}
                 </p>
             </Link>
