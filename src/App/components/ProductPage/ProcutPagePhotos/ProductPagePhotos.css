@@ -1,0 +1,10 @@
+.productPagePhotos {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .productPagePhotos {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=ProductPagePhotos.css.map */

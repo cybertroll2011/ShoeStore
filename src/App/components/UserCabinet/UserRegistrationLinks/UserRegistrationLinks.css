@@ -1,0 +1,19 @@
+.userRegistrationLinks {
+  width: 50%;
+  margin: 150px auto;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.userRegistrationLinks a {
+  display: block;
+  width: 80%;
+  margin: 0 auto 25px;
+  padding: 15px;
+  font-size: 28px;
+  text-align: center;
+}
+/*# sourceMappingURL=UserRegistrationLinks.css.map */

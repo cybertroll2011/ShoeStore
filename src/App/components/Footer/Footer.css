@@ -1,0 +1,70 @@
+.footer {
+  margin-top: auto;
+  color: #f6f6f6;
+  background-color: #090909;
+  -webkit-box-shadow: 0 -10px 30px rgba(255, 15, 15, 0.7);
+          box-shadow: 0 -10px 30px rgba(255, 15, 15, 0.7);
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 0;
+}
+
+.footer__inner a {
+  display: block;
+  color: #f6f6f6;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.footer__inner a:hover {
+  color: #ff0f0f;
+}
+
+.footer__titlePageLink {
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+.footer__socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__socialLinks-item {
+  margin-right: 25px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer__inner-right {
+  width: 30%;
+  text-align: left;
+}
+
+.footer__inner-right a {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .footer__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__inner-left,
+  .footer__inner-right {
+    min-width: 51%;
+  }
+  .footer__inner-right {
+    margin-top: 25px;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

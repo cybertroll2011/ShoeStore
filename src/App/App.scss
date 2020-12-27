@@ -26,6 +26,7 @@
 .App{
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     background-color: #F6F6F6;
     font-family: 'Teko';
     box-sizing: border-box;

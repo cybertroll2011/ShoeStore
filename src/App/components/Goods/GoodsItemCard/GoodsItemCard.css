@@ -1,0 +1,71 @@
+.goodsItemCard-wrapper {
+  width: 33.333%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+.goodsItemCard {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: #0f0f0f;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  position: relative;
+}
+
+.goodsItemCard:hover .goodsItemCard__photo {
+  display: none;
+}
+
+.goodsItemCard:hover .goodsItemCard__photo-hidden {
+  display: block;
+}
+
+.goodsItemCard__photo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.goodsItemCard__photo-wrapper img {
+  width: 100%;
+}
+
+.goodsItemCard__photo {
+  width: 100%;
+  display: block;
+}
+
+.goodsItemCard__photo-hidden {
+  width: 100%;
+  display: none;
+}
+
+.goodsItemCard__name {
+  margin-top: 15px;
+}
+
+.goodsItemCard__price {
+  font-size: 24px;
+}
+
+@media (max-width: 990px) {
+  .goodsItemCard-wrapper {
+    width: 48%;
+  }
+}
+
+@media (max-width: 545px) {
+  .goodsItemCard-wrapper {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=GoodsItemCard.css.map */

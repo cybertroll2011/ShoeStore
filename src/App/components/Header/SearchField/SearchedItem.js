@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SearchedItem = ({ item }) => {
     return (
         <li className="searchedItem">
-            <Link to={'/' + item.type + '/' + item.id}>
+            <Link to={'/product/' + item.type + '/' + item.id}>
                 <div className="searchedItem__left">
                     <img src={item.photos[0]} alt="" />
                 </div>

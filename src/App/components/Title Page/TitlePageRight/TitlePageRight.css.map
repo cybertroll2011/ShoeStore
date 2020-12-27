@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,sBAAsB,CAAC;EACnB,MAAM,EAAE,GAAG;EACX,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,IAAI;EACjB,UAAU,EAAE,KAAK;CACpB;;AACD,AAAA,qBAAqB,CAAC;EAClB,OAAO,EAAE,KAAK;EACd,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,QAAQ;CAKvB;;AARD,AAKI,qBALiB,AAKhB,MAAM,CAAA;EACH,MAAM,EAAE,aAAa;CACxB",
+    "sources": [
+        "TitlePageRight.scss"
+    ],
+    "names": [],
+    "file": "TitlePageRight.css"
+}

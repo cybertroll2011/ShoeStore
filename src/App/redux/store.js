@@ -9,6 +9,10 @@ import tshirtsReducer from './goods/tshirtsSlice';
 import hoodiesReducer from './goods/hoodiesSlice';
 import pantsReducer from './goods/pantsSlice';
 
+import userReducer from './user/userSlice';
+
+import cartReducer from './cart/cartSlice';
+
 export default configureStore({
     reducer: {
         titlePageItems: titlePageReducer,
@@ -17,6 +21,8 @@ export default configureStore({
         shoes: shoesReducer,
         tshirts: tshirtsReducer,
         hoodies: hoodiesReducer,
-        pants: pantsReducer
+        pants: pantsReducer,
+        user: userReducer,
+        cart: cartReducer
     }
 });

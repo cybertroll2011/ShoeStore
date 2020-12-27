@@ -1,5 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { getFirebaseDatabase } from '../../../firebase/firebase';
+import { addGoodsData } from '../../../redux/goods/goodsSlice';
+
 import SearchedItem from './SearchedItem';
 import './SearchField.scss';
 
@@ -7,22 +11,28 @@ const SearchField = ({ colorTheme }) => {
     const [searchComponentClassName, setSearchComponentClassName]
         = useState('searchComponent');
     const [inputValue, setInputValue] = useState('');
+    const [downloadStatus, setDownloadStatus] = useState(false);
 
-    const onInputValueChanged = e => setInputValue(e.target.value);
-
-    // get all data from database
-    let allGoods = [];
-    const downloadData = () => {
-        if (searchComponentClassName === 'searchComponent searchComponent-active' &&
-            allGoods.length === 0) {
-            getFirebaseDatabase().ref('/goods/shoes').on('value', (data) => {
-                data.val().map(item => {
-                    return allGoods.push(item);
-                });
-            });
+    const onInputValueChanged = e => {
+        if (downloadStatus === true) {
+            setInputValue(e.target.value);
         }
     }
-    downloadData();
+
+    const dispatch = useDispatch();
+
+    // get all goods data from database or redux store
+    let allGoods = useSelector(state => state.allGoods.allGoodsData);
+    useEffect(() => {
+        if (searchComponentClassName === 'searchComponent searchComponent-active' &&
+            allGoods.length === 0) {
+            getFirebaseDatabase().ref('/goods').on('value', (data) => {
+                let response = data.val();
+                dispatch(addGoodsData(response));
+                setDownloadStatus(true);
+            });
+        }
+    });
 
     // filter data based on input value
     const searchingGoods = allGoods.filter(item => {
@@ -34,7 +44,7 @@ const SearchField = ({ colorTheme }) => {
         return false
     })
 
-    //show filtered items to user
+    // show filtered items to user
     const searchedItems = searchingGoods.map(item => (
         <SearchedItem key={item.id} item={item} />
     ))

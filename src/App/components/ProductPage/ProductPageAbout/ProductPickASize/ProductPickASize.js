@@ -1,21 +1,20 @@
 import React from 'react';
 import './ProductPickASize.scss';
 
-const ProductPickASize = ({ item, clickHandler }) => {
+const ProductPickASize = ({ item, clickHandler, pickedSize }) => {
 
     const PickASize = () => {
         if (item.sizes) {
             return (
                 item.sizes.map(size => {
                     const Input = () => {
-                        // default checked first radio
-                        if (item.sizes.indexOf(size) === 0) {
+                        if (pickedSize === size) {
                             return (
                                 <input
+                                    defaultChecked
                                     type="radio"
                                     value={size}
                                     name="size"
-                                    defaultChecked
                                 />
                             )
                         } else {
@@ -48,7 +47,7 @@ const ProductPickASize = ({ item, clickHandler }) => {
         <div className="productPageAbout__pickSize">
             <p className="productPageAbout__pickSize-title">
                 Pick a size (EU)
-                </p>
+            </p>
             <div className="productPageAbout__pickSize-items-wrapper">
                 <PickASize />
             </div>

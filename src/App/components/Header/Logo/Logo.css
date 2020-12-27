@@ -1,0 +1,56 @@
+.logo {
+  width: 140px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo:hover .logo__linkOnHover {
+  opacity: 1;
+  top: 0;
+}
+
+.logo:hover .logo__mainLink .logo__mainLink-extraColor {
+  border-radius: 0px;
+  opacity: 0;
+}
+
+.logo a {
+  font-size: 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo__mainLink {
+  position: relative;
+}
+
+.logo__mainLink .logo__mainLink-extraColor {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  position: absolute;
+  top: -150px;
+  left: calc(50% - 84px);
+}
+
+.logo__mainLink .logo__mainLink-extraColor p {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: -18px;
+  left: 17px;
+}
+
+.logo__linkOnHover {
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  position: absolute;
+  top: -5px;
+  left: 4px;
+}
+/*# sourceMappingURL=Logo.css.map */

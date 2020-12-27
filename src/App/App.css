@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Teko';
+  src: url(./fonts/Teko/Teko-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Teko';
+  src: url(./fonts/Teko/Teko-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Teko';
+  src: url(./fonts/Teko/Teko-Light.ttf);
+  font-weight: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  font-family: 'Teko';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #F6F6F6;
+  font-family: 'Teko';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media (max-width: 545px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+/*# sourceMappingURL=App.css.map */

@@ -69,19 +69,7 @@
 .productLeaveReview__submit {
     margin-top: 25px;
     padding: 5px 20px;
-    color: #fff;
-    background-color: #0f0f0f;
-    border-radius: 4px;
-    box-shadow: 0 0 10px red;
     font-size: 30px;
-    cursor: pointer;
-    transition: 0.3s ease;
-
-    &:hover {
-        color: #0f0f0f;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
 }
 
 @media (max-width: 768px) {

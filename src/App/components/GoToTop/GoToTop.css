@@ -1,0 +1,50 @@
+.goToTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  font-size: 25px;
+  opacity: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  cursor: pointer;
+  outline: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: -1;
+}
+
+.goToTop .bi-arrow-up {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.goToTop:hover .bi-arrow-up {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.goToTop-active {
+  opacity: 1;
+  z-index: 10;
+}
+
+@media (max-width: 545px) {
+  .goToTop {
+    bottom: 25px;
+    right: 25px;
+  }
+}
+/*# sourceMappingURL=GoToTop.css.map */

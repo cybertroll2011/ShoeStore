@@ -1,0 +1,35 @@
+.btn {
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:disabled{
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+.main-btn {
+    color: #FFFFFF;
+    background-color: #0F0F0F;
+    box-shadow: 0 0 10px red;
+
+    &:hover {
+        color: #0F0F0F;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.secondary-btn {
+    color: #0F0F0F;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+        color: #FFFFFF;
+        background-color: #0F0F0F;
+        box-shadow: 0 0 10px red;
+    }
+}

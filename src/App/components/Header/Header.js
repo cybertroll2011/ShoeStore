@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import useScrollRestoration from '../../useScrollRestoration';
 
 import './Header.scss';
 import { colorThemesPack } from './headerColorThemesPack';
@@ -11,6 +12,7 @@ import Bag from './Bag/Bag';
 
 const Header = () => {
     const [headerClassName, setHeaderClassName] = useState('header');
+    useScrollRestoration();
 
     const colorTheme = useSelector(state => state.colorTheme.colorTheme);
     const colorThemes = colorThemesPack;

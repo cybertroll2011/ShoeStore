@@ -1,0 +1,19 @@
+.titlePage__item-right {
+  height: 50%;
+  margin-top: auto;
+  padding-top: 50px;
+  text-align: right;
+}
+
+.titlePage__item-link {
+  display: block;
+  margin-bottom: 10px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.titlePage__item-link:hover {
+  -webkit-filter: contrast(50%);
+          filter: contrast(50%);
+}
+/*# sourceMappingURL=TitlePageRight.css.map */

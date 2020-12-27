@@ -79,19 +79,13 @@
         border-bottom-right-radius: 4px;
     }
 }
-.searchedItem {
-    border-bottom: 2px solid #ccc;
-
-    &:last-child {
-        border-bottom: none;
-    }
-}
 .searchedItem a {
     display: flex;
     justify-content: space-between;
     padding: 15px;
     color: #1b1b1b;
     background-color: #fff;
+    border-bottom: 2px solid #ccc;
     font-size: 18px;
     box-sizing: border-box;
     text-decoration: none;

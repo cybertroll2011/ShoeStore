@@ -7,12 +7,14 @@ import ProductPageReviewItem from './ProductPageReviewItem';
 const ProductPageReviews = ({ item }) => {
     let ProductPageReview;
     if (item.customerReviews) {
-        let reviews = item.customerReviews.reverse();
-        ProductPageReview = reviews.map(review => (
-            <ProductPageReviewItem
-                key={item.id + item.customerReviews.indexOf(review)}
-                review={review} />
-        ))
+        ProductPageReview = Object.keys(item.customerReviews).reverse().map(key => {
+            const review = item.customerReviews[key];
+            return (
+                <ProductPageReviewItem
+                    key={key}
+                    review={review} />
+            )
+        });
     }
 
     return (
@@ -20,7 +22,7 @@ const ProductPageReviews = ({ item }) => {
             <h2 className="productPageReviews__title">
                 Customers reviews
             </h2>
-            <ProductLeaveReview />
+            <ProductLeaveReview product={item} />
             <ul className="productPageReviews__wrapper">
                 {ProductPageReview}
             </ul>
