@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -29,7 +29,7 @@ const Cart = () => {
     let userCart = [];
     if (userCartDownloaded[0]) {
         Object.keys(userCartDownloaded[0]).map(key => {
-            userCart.push(userCartDownloaded[0][key]);
+            return userCart.push(userCartDownloaded[0][key]);
         })
     }
     const userCartItems = userCart.map(cartItem => (

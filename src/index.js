@@ -9,6 +9,7 @@ import store from './App/redux/store';
 import { Provider } from 'react-redux';
 
 initializeFirebaseApp();
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

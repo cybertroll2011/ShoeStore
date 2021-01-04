@@ -32,7 +32,7 @@ const TitlePage = () => {
                 dispatch(setLoadingStatus('succeeded'));
             });
         }
-    })
+    }, [])
 
     const nextTitlePageItem = (index) => {
         setTimeout(() => {

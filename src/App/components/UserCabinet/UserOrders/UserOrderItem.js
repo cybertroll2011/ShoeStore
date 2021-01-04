@@ -16,7 +16,7 @@ const UserOrderItem = ({ orderId, cart, shipInfo, orderDate }) => {
                     key={cartItem.orderId}
                     to={`/product/${cartItem.type}/${cartItem.productId}`}
                     className="userOrderItem__purchasedItem">
-                    <img src={cartItem.photo} />
+                    <img src={cartItem.photo} alt="" />
                 </Link>
             )
         } else if (componentStatus === 'active') {
@@ -24,7 +24,7 @@ const UserOrderItem = ({ orderId, cart, shipInfo, orderDate }) => {
                 <div
                     key={cartItem.orderId}
                     className="userOrderItem__purchasedItem">
-                    <img src={cartItem.photo} />
+                    <img src={cartItem.photo} alt="" />
                     <div className="userOrderItem__purchasedItem-info">
                         <p>
                             <span>Product: </span>
@@ -53,6 +53,7 @@ const UserOrderItem = ({ orderId, cart, shipInfo, orderDate }) => {
                 </div>
             )
         }
+        return
     })
 
     if (componentStatus === 'inactive') {

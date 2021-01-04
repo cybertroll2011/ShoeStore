@@ -11,7 +11,6 @@ import '../../../../toolsStyles/button.scss';
 const ProductLeaveReview = ({ product }) => {
     const [review, setReview] = useState({ productRating: 0, review: "" });
     const [userFullName, setUserFullName] = useState('');
-    console.log(product);
 
     const isUserLogedIn = useSelector(state => state.user.isLogedIn);
     const userLogin = useSelector(state => state.user.login);
